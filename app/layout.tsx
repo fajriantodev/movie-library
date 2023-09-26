@@ -2,6 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Ubuntu } from "next/font/google";
 import Navbar from "@/components/navbar";
+import Footer from "@/components/footer";
 
 const ubuntu = Ubuntu({
   display: "swap",
@@ -27,6 +28,7 @@ export default function RootLayout({
         </div>
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
