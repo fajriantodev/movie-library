@@ -23,7 +23,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${ubuntu.className}`}>
         <div className="fixed -z-10 h-screen w-full bg-[url('/img/home-theater.jpg')] bg-cover bg-center">
-          <div className="h-full bg-[rgba(0,0,0,0.7)] backdrop-blur-[50px]"></div>
+          <div className="h-full bg-[rgba(0,0,0,0.9)] backdrop-blur-[50px]" />
         </div>
         <Navbar />
         {children}

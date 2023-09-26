@@ -18,7 +18,7 @@ const MoviePoster = ({ movie, genres, isLoading }: Props) => {
         {!isLoading && (
           <>
             <Image
-              src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
+              src={`${process.env.NEXT_PUBLIC_TMDB_IMAGE_ENDPOINT}/t/p/original${movie.poster_path}`}
               fill
               sizes="1000px"
               alt={movie.title}
@@ -26,7 +26,7 @@ const MoviePoster = ({ movie, genres, isLoading }: Props) => {
             />
             <div className="absolute flex h-full w-full items-center justify-center rounded-xl bg-black bg-opacity-70 opacity-0 transition-opacity duration-200 group-hover:opacity-100">
               <Link
-                href="/"
+                href={`/movie/${movie.id}`}
                 className="mt-4 inline-block rounded-xl border border-yellow-600 px-4 py-2 text-sm text-white transition-colors duration-200 hover:bg-yellow-600"
               >
                 More Info
@@ -38,7 +38,7 @@ const MoviePoster = ({ movie, genres, isLoading }: Props) => {
       <div className="mt-3">
         <div className="flex justify-between space-x-10">
           <Link
-            href="/"
+            href={`/movie/${movie.id}`}
             className={`${
               isLoading && "skeleton-loader"
             } overflow-hidden text-ellipsis whitespace-nowrap text-lg text-white hover:underline`}

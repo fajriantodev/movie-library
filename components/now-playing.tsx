@@ -16,7 +16,7 @@ const NowPlaying = ({ movies, genres }: Props) => {
               key={index}
               className="relative col-span-3 row-span-3 overflow-hidden rounded-2xl bg-cover bg-center"
               style={{
-                backgroundImage: `url(https://image.tmdb.org/t/p/original${movie.backdrop_path})`,
+                backgroundImage: `url(${process.env.NEXT_PUBLIC_TMDB_IMAGE_ENDPOINT}/t/p/original${movie.backdrop_path})`,
               }}
             >
               <div className="absolute bottom-0 bg-gradient-to-t from-black to-transparent p-10">
@@ -54,7 +54,7 @@ const NowPlaying = ({ movies, genres }: Props) => {
                 </h1>
                 <p className="mt-4 w-3/4 text-gray-300">{movie.overview}</p>
                 <Link
-                  href="/"
+                  href={`/movie/${movie.id}`}
                   className="mt-4 inline-block rounded-xl border border-yellow-600 bg-transparent px-5 py-2.5 text-white transition-colors duration-200 hover:bg-yellow-600"
                 >
                   More Info
@@ -66,12 +66,12 @@ const NowPlaying = ({ movies, genres }: Props) => {
               key={index}
               className="relative aspect-[16/10] overflow-hidden rounded-2xl bg-cover bg-center"
               style={{
-                backgroundImage: `url(https://image.tmdb.org/t/p/original${movie.backdrop_path})`,
+                backgroundImage: `url(${process.env.NEXT_PUBLIC_TMDB_IMAGE_ENDPOINT}/t/p/original${movie.backdrop_path})`,
               }}
             >
               <div className="absolute bottom-0 bg-gradient-to-t from-black to-transparent p-5">
                 <Link
-                  href="/"
+                  href={`/movie/${movie.id}`}
                   className="text-2xl font-medium text-white hover:underline"
                 >
                   {movie.original_title}
