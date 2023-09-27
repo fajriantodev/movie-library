@@ -1,6 +1,7 @@
 import Image from "next/image";
 import fetcher from "@/utils/fetcher";
 import SectionTitle from "@/components/section-title";
+import MoviePreview from "@/components/movie-preview";
 
 interface Props {
   params: { id: number };
@@ -116,19 +117,7 @@ export default async function Movie({ params }: Props) {
           }
           title="Preview"
         />
-        <div className="mt-4 grid grid-cols-4 gap-4">
-          {images?.backdrops.map((image: any, index: number) => (
-            <div key={index} className="relative aspect-video">
-              <Image
-                src={`${process.env.NEXT_PUBLIC_TMDB_IMAGE_ENDPOINT}/t/p/original${image.file_path}`}
-                fill
-                sizes="1000px"
-                alt={movie.title}
-                className="rounded-md"
-              />
-            </div>
-          ))}
-        </div>
+        <MoviePreview movie={movie} images={images} />
       </div>
     </div>
   );

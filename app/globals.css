@@ -14,3 +14,11 @@
     -webkit-box-orient: vertical;
   }
 }
+
+.swiper-pagination-bullet {
+  background: #fff !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: #ca8a04 !important;
+}
