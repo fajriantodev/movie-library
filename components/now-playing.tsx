@@ -55,7 +55,7 @@ const NowPlaying = ({ movies, genres }: Props) => {
                 <p className="mt-4 w-3/4 text-gray-300">{movie.overview}</p>
                 <Link
                   href={`/movie/${movie.id}`}
-                  className="mt-4 inline-block rounded-xl border border-yellow-600 bg-transparent px-5 py-2.5 text-white transition-colors duration-200 hover:bg-yellow-600"
+                  className="mt-4 inline-block rounded-lg border border-yellow-600 bg-transparent px-5 py-2.5 text-white transition-colors duration-200 hover:bg-yellow-600"
                 >
                   More Info
                 </Link>

@@ -27,7 +27,7 @@ const MoviePoster = ({ movie, genres, isLoading }: Props) => {
             <div className="absolute flex h-full w-full items-center justify-center rounded-xl bg-black bg-opacity-70 opacity-0 transition-opacity duration-200 group-hover:opacity-100">
               <Link
                 href={`/movie/${movie.id}`}
-                className="mt-4 inline-block rounded-xl border border-yellow-600 px-4 py-2 text-sm text-white transition-colors duration-200 hover:bg-yellow-600"
+                className="mt-4 inline-block rounded-md border border-yellow-600 px-4 py-2 text-sm text-white transition-colors duration-200 hover:bg-yellow-600"
               >
                 More Info
               </Link>

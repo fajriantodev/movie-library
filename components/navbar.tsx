@@ -5,7 +5,10 @@ const Navbar = () => {
     <nav className="sticky top-0 z-50 bg-gradient-to-b from-black to-transparent">
       <div className="container py-10">
         <div className="flex items-center justify-between">
-          <Link href="/" className="text-2xl font-bold uppercase text-white">
+          <Link
+            href="/"
+            className="text-2xl font-bold uppercase text-yellow-500 transition-colors duration-200 hover:text-yellow-600"
+          >
             Movie Library
           </Link>
           <div className="flex items-center space-x-24">
@@ -24,14 +27,6 @@ const Navbar = () => {
                   className="font-medium text-white hover:underline"
                 >
                   TV Shows
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/"
-                  className="font-medium text-white hover:underline"
-                >
-                  Pricing
                 </Link>
               </li>
             </ul>
