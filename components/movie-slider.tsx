@@ -26,9 +26,20 @@ const MovieSlider = ({ title, icon, movies, genres, delay }: Props) => {
         }}
         loop
         spaceBetween={20}
-        slidesPerView={5}
+        slidesPerView={2}
         className="mt-4"
         modules={[Autoplay]}
+        breakpoints={{
+          768: {
+            slidesPerView: 2,
+          },
+          1024: {
+            slidesPerView: 3,
+          },
+          1280: {
+            slidesPerView: 5,
+          },
+        }}
       >
         {movies?.results.map((movie: Movie, index: number) => (
           <SwiperSlide key={index}>

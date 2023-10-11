@@ -51,7 +51,7 @@ const Popular = ({ initialMovies, genres }: Props) => {
         next={loadMoreMovies}
         hasMore={true}
         loader="<h4 className='text-white'>Loading...</h4>"
-        className="mt-4 grid grid-cols-5 gap-x-5 gap-y-8"
+        className="mt-4 grid grid-cols-2 gap-x-5 gap-y-8 lg:grid-cols-5"
       >
         {movies?.map((movie: Movie, index: number) => (
           <MoviePoster

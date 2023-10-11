@@ -7,14 +7,14 @@ interface Props {
 
 const NowPlaying = ({ movies, genres }: Props) => {
   return (
-    <div className="grid grid-cols-4 grid-rows-3 gap-5">
+    <div className="grid grid-cols-1 gap-5 lg:grid-cols-4 lg:grid-rows-3">
       {movies?.results.map(
         (movie: Movie, index: number) =>
           index <= 3 &&
           (index === 0 ? (
             <div
               key={index}
-              className="relative col-span-3 row-span-3 overflow-hidden rounded-2xl bg-cover bg-center"
+              className="relative overflow-hidden rounded-2xl bg-cover bg-center lg:col-span-3 lg:row-span-3"
               style={{
                 backgroundImage: `url(${process.env.NEXT_PUBLIC_TMDB_IMAGE_ENDPOINT}/t/p/original${movie.backdrop_path})`,
               }}
